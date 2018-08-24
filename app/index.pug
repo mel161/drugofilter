@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+  body
+    .grid.grid--container
+      .col.col--md-8.col--sm-offset-2
+        .filter
+          //- Filter Header
+          .filter__header
+            h1.title Выберете друзей
+          //- Filter Header End
+          //- Filter Inner
+          .filter__inner
+            //- Filter Search Block
+            .filter__search
+              .row.row--no-gutters
+                .col.col--md.col--no-gutters
+                  input(type='search' placeholder="Начните вводить имя друга" name="js-name")
+                .col.col--md.col--no-gutters
+                  input(type='search' placeholder="Начните вводить имя друга" name="js-name-selected")                  
+            //- Filter Search Block End
+            //- Filter Body Block
+            .filter__body
+            
+            //- Filter Body Block End
+            //- Filter Footer
+            .filter__footer
+              
+            //- Filter Footer End
+              

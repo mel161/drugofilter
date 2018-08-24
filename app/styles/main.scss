@@ -1,0 +1,23 @@
+// @import 'fonts';
+@import '~flexbox-grid-sass/src/flexbox-grid'; // Grid
+//
+//// Variables
+// Color
+$primary: #eb8200;
+$dark: #1f1f1f;
+$medium: #5f5f5f;
+$medium-2: #4c4c4c;
+$light: #c1c998;
+$accent: #eb8200;
+$white: #fff;
+$black: #000;
+
+body {
+  font-family     : 'Arial', sans-serif;
+  background-color: $white;
+  margin          : 0;
+}
+
+@import 'header';
+@import 'logo';
+@import 'btn';

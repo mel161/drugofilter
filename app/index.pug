@@ -1,11 +1,12 @@
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Document
   body
+    #vk_api_transport
     .grid.grid--container
       .col.col--md-8.col--sm-offset-2
         .filter
@@ -21,14 +22,28 @@ html(lang="en")
                 .col.col--md.col--no-gutters
                   input(type='search' placeholder="Начните вводить имя друга" name="js-name")
                 .col.col--md.col--no-gutters
-                  input(type='search' placeholder="Начните вводить имя друга" name="js-name-selected")                  
+                  input(type='search' placeholder="Начните вводить имя друга" name="js-name-selected")
             //- Filter Search Block End
             //- Filter Body Block
             .filter__body
-            
+              .row.row--no-gutters
+                .col.col--md.col--no-gutters
+                  .friends
+                    .friends__title Ваши друзья
+                    ul.friends__list.friends__list--base
+                .col.col--md.col--no-gutters
+                  .friends
+                    .friends__title Друзья в списке
+                    ul.friends__list
+                      li.friends__item
+                        span.text Friend 1
+                        svg(xmlns='http://www.w3.org/2000/svg', width='16', height='16').icon.icon--plus
+                          path(fill='#C3C3C3', fill-rule='evenodd', d='M14 10h-4v4a2 2 0 1 1-4 0v-4H2a2 2 0 1 1 0-4h4V2a2 2 0 1 1 4 0v4h4a2 2 0 1 1 0 4z')
+
             //- Filter Body Block End
             //- Filter Footer
             .filter__footer
-              
+              button(type="button", name="button").btn Сохранить
+
             //- Filter Footer End
-              
+    script(src='https://vk.com/js/api/openapi.js?159', type='text/javascript')

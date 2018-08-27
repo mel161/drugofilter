@@ -1,0 +1,12 @@
+.filter {
+  background-color: $white;
+  border-radius: 10px;
+  height: 490px;
+  max-width: 620px;
+  overflow: hidden;
+
+  &__header {
+    background-color: #e48565;
+  }
+
+}

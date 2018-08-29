@@ -1,0 +1,9 @@
+each item in items
+  li.filter-friend.js-friend(data-id=item.id, draggable='true', data-friend=`{"name":"`+item.first_name+`", "lastName": "`+item.last_name+`"}`)
+    .filter-friend__ava
+      img.filter-friend__image(src=item.photo_100 alt="")
+    .filter-friend__name= item.first_name + ' ' + item.last_name
+    .filter-friend__button.js-friend-button f
+      //- svg.filter-friend__button-icon
+        use.filter-friend__button-svg(xlink:href='#cross', x='0', y='0')
+        {"name":"{{first_name}}", "lastName":"{{last_name}}"}

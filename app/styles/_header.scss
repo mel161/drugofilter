@@ -1,2 +1,19 @@
 // Header Styles
 // Variables
+
+.header {
+  &--title {
+    font-size: 16px;
+    color: $white;
+  }
+
+  &--friends {
+    font-size: 12px;
+    color: #4f4f4f;
+    line-height: 1.2;
+  }
+
+  // $--friend-name {
+  //
+  // }
+}

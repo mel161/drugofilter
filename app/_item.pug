@@ -1,9 +1,8 @@
 each item in items
-  li.filter-friend.js-friend(data-id=item.id, draggable='true', data-friend=`{"name":"`+item.first_name+`", "lastName": "`+item.last_name+`"}`)
-    .filter-friend__ava
-      img.filter-friend__image(src=item.photo_100 alt="")
-    .filter-friend__name= item.first_name + ' ' + item.last_name
-    .filter-friend__button.js-friend-button f
-      //- svg.filter-friend__button-icon
-        use.filter-friend__button-svg(xlink:href='#cross', x='0', y='0')
-        {"name":"{{first_name}}", "lastName":"{{last_name}}"}
+  li.friends__item.js-friend(data-id=item.id, draggable='true', data-friend=`{"name":"`+item.first_name+`", "lastName": "`+item.last_name+`"}`)
+    .image.image--circle.image--avatar
+      img(src=item.photo_100 alt="")
+    .header.header--friends.header--friend-name= item.first_name + ' ' + item.last_name
+    button.btn.btn--move.js-friend-button
+      svg(xmlns='http://www.w3.org/2000/svg', width='14', height='14').icon.icon--plus
+        path(fill='#C4C4C4', fill-rule='evenodd', d='M9.828 7l2.829 2.828a2 2 0 0 1-2.829 2.829L7 9.828l-2.828 2.829a2 2 0 0 1-2.829-2.829L4.172 7 1.343 4.172a2 2 0 0 1 2.829-2.829L7 4.172l2.828-2.829a2 2 0 0 1 2.829 2.829L9.828 7z')

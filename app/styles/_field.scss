@@ -1,0 +1,25 @@
+.field {
+  width  : auto;
+  padding: 10px 15px;
+
+  &--common {}
+
+  &__input {
+    background-color: $white;
+    border          : 0;
+    border-radius   : 100px;
+    color           : #9f9f9f;
+    font-size       : 12px;
+    outline         : none;
+    padding         : 6px 10px 6px 18px;
+    width           : 100%;
+
+    &:active {
+      outline: none;
+    }
+
+    &--common {
+      padding-left: 35px;
+    }
+  }
+}

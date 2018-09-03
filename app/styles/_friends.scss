@@ -1,15 +1,40 @@
-.friends {
-  height: 100%;
-  position: relative;
-  &__list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
-    height: 355px;
-    position: relative;
-  }
-  &__item {
+// Header Styles
+// Variables
 
+.friends {
+  height  : 100%;
+  position: relative;
+
+  &__list {
+    height         : 325px;
+    list-style-type: none;
+    margin         : 0;
+    overflow-y     : scroll;
+    padding        : 0;
+    position       : relative;
+  }
+
+  &__item {
+    align-items   : center;
+    border-top    : 1px solid #f0f0f0;
+    display       : flex;
+    flex-direction: row;
+    padding       : 6px;
+    position      : relative;
+  }
+}
+
+.js-friends-list {
+  &::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  &::-webkit-scrollbar {
+    width           : 6px;
+    background-color: #f0f0f0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #c4c4c4;
   }
 }

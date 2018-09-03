@@ -2,13 +2,34 @@
   background-color: $white;
   border-radius: 10px;
   height: 490px;
-  max-width: 620px;
+  // max-width: 620px;
   overflow: hidden;
 
   &__header {
     background-color: #e48565;
+    padding: 15px 15px 13px;
+    position: relative;
+  }
+  &__close {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    margin-top: -6px;
   }
 
+  &__fields {
+    background-color: #f0f0f0;
+
+    .col--no-gutters {
+      padding: 0;
+    }
+  }
+
+  &__footer {
+    background-color: #f0f0f0;
+    padding: 7px;
+    text-align: right;
+  }
 }
 
 .hide {

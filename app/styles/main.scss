@@ -13,21 +13,16 @@ $white: #fff;
 $black: #000;
 
 body {
-  font-family     : 'Arial', sans-serif;
+  font-family     : 'Fira Sans', sans-serif;
+  font-weight     : 500;
   background-color: rgba(#242222, .4);
   margin          : 0;
 }
 
-.title {
-  font-size: 16px;
-  font-family: 'Fira Sans';
-  color: $white;
-  line-height: 1.2;
-  margin: 0;
-}
-
-@import 'header';
-@import 'logo';
 @import 'btn';
-@import 'friends';
+@import 'field';
 @import 'filter';
+@import 'friends';
+@import 'header';
+@import 'image';
+@import 'logo';

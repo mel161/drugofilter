@@ -6,7 +6,7 @@ export default function () {
   const friendListsClass = 'js-friends-list'
   const friendButtonClass = 'js-friend-button'
 
-  const filterContainer = document.querySelector('.js-filter')
+  const filterContainer = document.querySelector('.filter')
   const commonFriends = document.querySelector(`.${friendListsClass}[data-list="common"]`)
   const favoriteFriends = document.querySelector(`.${friendListsClass}[data-list="favorite"]`)
   const friendList = document.querySelectorAll(`.${friendListsClass}`)
@@ -129,8 +129,15 @@ export default function () {
     handleDrop: function (event) {
       let target = event.target
 
-      target.insertBefore(this.dragElement, target.firstChild)
-      target.classList.remove('over')
+      this.dragElement.querySelector('.icon').classList.toggle('icon--plus')
+
+      if (target.classList.contains('friends__list')) {
+        target.appendChild(this.dragElement)
+        target.classList.remove('over')
+      } else {
+        let list = target.closest(`.${friendListsClass}`)
+        list.insertBefore(this.dragElement, target)
+      }
 
       filterInputs.forEach(function (input) {
         this.checkMatch(undefined, input)
@@ -148,9 +155,11 @@ export default function () {
         return
 
       if (dataList === 'common') {
-        favoriteFriends.insertBefore(friend, favoriteFriends.firstChild)
+        favoriteFriends.appendChild(friend)
+        button.getElementsByTagName('svg')[0].classList.remove('icon--plus')
       } else {
-        commonFriends.insertBefore(friend, commonFriends.firstChild)
+        commonFriends.appendChild(friend)
+        button.getElementsByTagName('svg')[0].classList.add('icon--plus')
       }
     },
     checkMatch: function (event, element) {
@@ -230,6 +239,9 @@ export default function () {
           commonFriends.innerHTML = html
         } else {
           favoriteFriends.innerHTML = html
+          favoriteFriends.querySelectorAll('.icon--plus').forEach(function (item) {
+            item.classList.remove('icon--plus')
+          })
         }
       }
     }

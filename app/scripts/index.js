@@ -1,5 +1,6 @@
-// import 'normalize.css/normalize.css'
 import './../styles/main.scss'
+
+import 'babel-polyfill'
 
 import filter from './_filter.js'
 
@@ -11,4 +12,13 @@ if (process.env.NODE_ENV !== 'production') {
 
 document.addEventListener('DOMContentLoaded', function (e) {
   filter()
+})
+
+document.querySelector('.image--logo').addEventListener('click', function (e) {
+  document.querySelector('.filter').classList.remove('hide')
+  filter()
+})
+
+document.querySelector('.filter__close').addEventListener('click', function (e) {
+  document.querySelector('.filter').classList.add('hide')
 })

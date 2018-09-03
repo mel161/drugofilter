@@ -80,6 +80,8 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "flexbox-grid-sass": "^4.1.0"
+    "babel-polyfill": "^6.26.0",
+    "flexbox-grid-sass": "^4.1.0",
+    "modernizr": "^3.6.0"
   }
 }
